@@ -1,9 +1,13 @@
-firewall-auth-py3
-=================
+##Usage:  
+firewall-auth-py3.py [options] [username [password]]
 
-Usage: firewall-auth-py3.py [options] [username [password]]
+####Options:  
 
-Options:
-  -h, --help     show this help message and exit
-  -v, --verbose  Print lots of debugging information
-  -n, --netrc    Read credentials from netrc file
+<dl>
+  <dt>-h, --help</dt>
+  <dd>Show this help message and exit</dd>
+  <dt>-v, --verbose</dt>
+  <dd>Print lots of debugging information</dd>
+  <dt>-n, --netrc</dt>
+  <dd>Read credentials from netrc file</dd>
+</dl>
