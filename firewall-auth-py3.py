@@ -180,7 +180,7 @@ def login():
     authconn.close()
 
   # Look for the right magic value in the data
-  match = re.search(r"VALUE=\"([0-9a-f]+)\"", data)
+  match = re.search(r"VALUE=\"([0-9a-f]+)\"", str(data))
   magicString = match.group(1)
   logger.debug("The magic string is: " + magicString)
 
@@ -201,7 +201,7 @@ def login():
     postconn.close()
 
   # Look for the keepalive URL
-  keepaliveMatch = re.search(r"location.href=\"(.+?)\"", postData)
+  keepaliveMatch = re.search(r"location.href=\"(.+?)\"", str(postData))
   if keepaliveMatch is None:
     # Whoops, unsuccessful -- probably the username and password didn't match
     logger.fatal("Authentication unsuccessful, check your username and password.")
